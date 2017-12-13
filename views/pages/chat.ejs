@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <link rel="stylesheet" href="/assets/css/chat.css" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-sm-12">
+                <% include ../partials/header %>
+                <div id="body">
+                    
+                </div>
+                <div class="control-wrapper row">
+                    <div class="list-textbox col-sm-8">
+                        <input id="listInput" type="text" placeholder="Write message here"/>
+                    </div>
+                    <div class="add-btn col-sm-4">
+                        <input id="listSubmit" type="submit" value="Submit"/>
+                    </div>
+                </div>
+                <% include ../partials/tabmenu %>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-sm-12">
+                <% include ../partials/header %>
+                <div id="body">
+                    <table class="table-dark table-striped">
+                        <tr>
+                            <th colspan="2">
+                                Grocery
+                            </th>
+                        </tr>
+                    
+                        <% for(var i=0; i < checkmarks.length; i++){ %>
+                            <tr>
+                                <td><%=checkmarks[i].item %></td>
+                                <td><a href="<%=checkmarks[i]._id%>" class="btn btn-danger">Delete </a></td>
+                            </tr>
+                       <% } %>
+                    </table>
+                </div>
+                <div class="control-wrapper row">
+                    <div class="list-textbox col-sm-8">
+                        <input id="listInput" type="text" placeholder="Add list"/>
+                    </div>
+                    <div class="add-btn col-sm-4">
+                        <input id="listSubmit" type="submit" value="Submit"/>
+                    </div>
+                </div>
+            <% include ../partials/tabmenu %>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/scripts/main.js"> </script>
+</body>
+</html>
